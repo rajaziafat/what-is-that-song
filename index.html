@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+  <link href="stylesheet" href="./assets/css/style.css">
+  <title>What Is That Song!</title>
+</head>
+
+
+
+<body class="flex flex-wrap h-full bg-gray-100">
+  <!-- Header -->
+  <header class="text-center h-20 w-full bg-gray-700">
+    <h1 class="text-4xl text-gray-200">What is That Song!</h1>
+    <h2 class="text-2xl text-gray-200">Find lyrics, album and more!</h2>
+  </header>
+
+  <!-- SIDE BAR - Buttons for previous searches stored in localStorage -->
+  <section>
+    <div class="">
+      <div class="flex p-2 h-4/5 w-48">
+        <div class="content-center historyDiv">
+        </div>
+  </section>
+
+  <!-- Main body -->
+  <div class="px-9 sm:px-0 pt-2 w-full sm:w-4/6 h-4/5">
+
+    <!-- Input form -->
+    <form>
+      <div class="flex sm:items-center flex-col sm:flex-row border-b border-teal-500 py-2">
+        <input id="song"
+          class="appearance-none shadow-lg bg-transparent border-2 border-black rounded w-full text-gray-700 mr-3 mb-2 sm:mb-0 py-3 px-3 sm:py-1 sm:px-2 leading-tight focus:ring-2 focus:ring-blue-500"
+          type="text" placeholder="Enter Song Name">
+        <input id="artist"
+          class="appearance-none shadow-lg bg-transparent border-2 border-black rounded w-full text-gray-700 mr-3 mb-2 sm:mb-0 py-3 px-3 sm:py-1 sm:px-2 leading-tight focus:ring-2 focus:ring-blue-500"
+          type="text" placeholder="Enter Artist Name">
+        <button id="search"
+          class="bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded"
+          type="button">
+          Search
+        </button>
+      </div>
+    </form>
+
+
+      <!--For Mobile Screen-->
+    <div class="flex flex-col w-full sm:w-1/6 h-auto p-2  mx-auto my-20 additionalMetadataReturn block sm:hidden ">
+
+    </div>
+
+    <!-- Hardcode title, artist & album return -->
+    <h1 class="mt-5 mx-7 text-2xl font-bold font-serif text-center titleReturn">
+
+    </h1>
+    <h1 class="mt-5 mx-7 text-2xl font-bold font-serif text-center artistReturn">
+
+    </h1>
+    <h1 class="mx-7 text-2xl font-bold font-serif text-center albumReturn">
+
+    </h1>
+
+    <!-- Hardcode lyric return -->
+    <div class="my-10 lyrics text-center px-4 sm:px-2 sm:text-left text-xl sm:lg font-medium sm:font-normal">
+    </div>
+  </div>
+
+  <!-- right hand side div for metadata such as album and cover art -->
+  <div class="w-full sm:w-1/6 h-auto p-2 mx-auto my-20 additionalMetadataReturn hidden sm:block">
+
+  </div>
+
+  <!-- modal -->
+  <div id="modal">
+    <div class="bg-black bg-opacity-50 absolute inset-0 flex justify-center items-center">
+      <!-- modal content -->
+      <div class="relative bg-gray-200 h-64 w-96 p-4 border-4">
+        <h1 class="text-2xl modal-message"></h1>
+        <button id="closeMod"
+          class="absolute bottom-0 right-0 bg-red-500 hover:bg-red-700 border-red-500 hover:border-red-700 text-sm border-4 text-white py-1 px-2 rounded"
+          type="button">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
